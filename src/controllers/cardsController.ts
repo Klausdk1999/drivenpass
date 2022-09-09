@@ -5,6 +5,8 @@ export async function createCard(req: Request, res: Response) {
 	const data = req.body;
 	const { id: owner_id } = res.locals.tokenDecoded;
 
+	data.expiration_date = new Date(data.expiration_date);
+	
 	await cardServices.createCard({ ...data, owner_id });
 
 	res.sendStatus(201);

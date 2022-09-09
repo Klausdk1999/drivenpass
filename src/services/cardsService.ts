@@ -2,10 +2,10 @@ import * as cardrepository from "../repositories/cardsRepository.js";
 import Cryptr from "cryptr";
 
 export async function sendCardsFromUser(id: number) {
-	
+	console.log(id)
 	const cryptr = new Cryptr(process.env.SECRET);
 	const cards = await cardrepository.getAllCards(id);
-
+	console.log (cards)
 	const sendInformations = cards.map((elem, index) => {
         
 		return {
@@ -36,7 +36,7 @@ export async function createCard(	data: cardrepository.TypeNewCard) {
 
 	await checkCardTitle(data.owner_id, data.name);
 
-	await cardrepository.insertCard({	...data,password: cryptr.encrypt(data.password),});
+	await cardrepository.insertCard({	...data, cvc: cryptr.encrypt(data.cvc), password: cryptr.encrypt(data.password)});
 }
 
 async function checkCardTitle(owner_id: number, name: string) {

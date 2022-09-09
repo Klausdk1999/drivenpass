@@ -4,7 +4,7 @@ const cardSchema = joi.object({
     title: joi.string().required(),
     name: joi.string().required(),
     number: joi.string().required(),
-    cvc: joi.number().min(3).max(3).required(),
+    cvc: joi.string().min(3).max(3).required(),
     expiration_date: joi.string().required(),
     password: joi.string().required(),
     is_virtual: joi.boolean().required(),
