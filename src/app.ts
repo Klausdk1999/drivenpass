@@ -2,12 +2,12 @@ import cors from "cors";
 import express, { json } from "express";
 import "express-async-errors";
 import { errorHandlerMiddleware } from "./middlewares/errorHandlerMiddleware.js";
-import memeRouter from "./routes/indexRouter.js";
+import router from "./routes/indexRouter.js";
 
 const app = express();
 app.use(json());
 app.use(cors());
-app.use(memeRouter);
+app.use(router);
 app.use(errorHandlerMiddleware);
 
 const PORT = process.env.PORT || 5000;

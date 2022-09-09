@@ -58,7 +58,7 @@ async function checkCredential(credentialId: number, owner_id: number) {
 		throw { code: "NotFound", message: "Esta credencial não existe" };
 
 	if (credential.owner_id !== owner_id)
-		throw {	code: "Anauthorized", message: "Você não tem permissão para ver credenciais de outros usuários.",};
+		throw {	code: "Unauthorized", message: "Você não tem permissão para ver credenciais de outros usuários.",};
 
 	return credential;
 }
