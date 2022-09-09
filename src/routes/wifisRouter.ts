@@ -1,7 +1,7 @@
 import { Router } from "express";
 import verifyToken from "../middlewares/validateToken.js";
 import * as wifiController from "../controllers/wifisController.js";
-import { validateSchema } from "../middlewares/validateSchemaMiddleware";
+import { validateSchema } from "../middlewares/validateSchemaMiddleware.js";
 import wifiSchema from "../schemas/wifiSchema.js";
 
 const wifisRouter = Router();

@@ -13,7 +13,7 @@ export async function sendSecure_notesFromUser(id: number) {
             };
     });
 	
-    return { wifis: sendInformations };
+    return { secure_notes : sendInformations };
 }
 
 export async function findSecure_noteById(id: number, owner_id: number) {

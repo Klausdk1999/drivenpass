@@ -8,5 +8,5 @@ export function errorHandlerMiddleware(
 ) {
   console.log(err);
 
-  return res.status(500);
+  return res.status(400).send(err);
 }

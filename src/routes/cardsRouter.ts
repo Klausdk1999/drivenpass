@@ -1,7 +1,7 @@
 import { Router } from "express";
 import verifyToken from "../middlewares/validateToken.js";
 import * as cardController from "../controllers/cardsController.js";
-import { validateSchema } from "../middlewares/validateSchemaMiddleware";
+import { validateSchema } from "../middlewares/validateSchemaMiddleware.js";
 import cardSchema from "../schemas/cardSchema.js";
 
 const cardsRouter = Router();

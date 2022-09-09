@@ -27,7 +27,7 @@ model credentials {
   owner    users  @relation(fields: [owner_id], references: [id])
   name     String @db.VarChar(255)
   url      String @db.VarChar(255)
-  username String @unique @db.VarChar(255)
+  username String @db.VarChar(255)
   password String @db.VarChar(255)
   @@unique([owner_id, name])
 }
