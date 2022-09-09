@@ -1,11 +1,11 @@
 import joi from "joi";
 
-const credentialSchema = joi.object({
+const wifiSchema = joi.object({
 
     url:joi.string().uri().required(),
     name:joi.string().required(),
     password:joi.string().required(),
-    username:joi.string().required()
+    network:joi.string().required()
 })
 
-export default credentialSchema;
+export default wifiSchema;
