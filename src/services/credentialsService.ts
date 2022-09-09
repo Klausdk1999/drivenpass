@@ -35,7 +35,7 @@ export async function createCredential(	data: credentialRepository.TypeNewCreden
 
 	await checkCredentialTitle(data.owner_id, data.name);
 
-	await credentialRepository.insert({	...data,password: cryptr.encrypt(data.password),});
+	await credentialRepository.insertCredential({	...data,password: cryptr.encrypt(data.password),});
 }
 
 async function checkCredentialTitle(owner_id: number, name: string) {

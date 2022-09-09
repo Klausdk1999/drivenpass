@@ -3,7 +3,7 @@ import { credentials } from "@prisma/client";
 
 export type TypeNewCredential = Omit<credentials, "id">;
 
-export async function insert(newCredential: TypeNewCredential) {
+export async function insertCredential(newCredential: TypeNewCredential) {
 	await prisma.credentials.create({ data: newCredential });
 }
 

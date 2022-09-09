@@ -2,7 +2,7 @@ import { Router } from "express";
 import verifyToken from "../middlewares/validateToken.js";
 import * as noteController from "../controllers/notesController.js";
 import { validateSchema } from "../middlewares/validateSchemaMiddleware";
-import secure_notesSchema from "../schemas/credentialSchema.js";
+import secure_notesSchema from "../schemas/noteSchema.js";
 
 const notesRouter = Router();
 
