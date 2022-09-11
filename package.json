@@ -6,7 +6,8 @@
   "main": "app.ts",
   "scripts": {
     "dev": "nodemon src/app.ts",
-    "start": "node ./src/app.ts"
+    "start": "node ./src/app.js",
+    "postinstall": "tsc"
   },
   "keywords": [],
   "author": "",
