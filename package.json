@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "app.ts",
+  "main": "app.js",
   "scripts": {
     "dev": "nodemon src/app.ts",
     "build": "tsc && npx prisma migrate deploy",
