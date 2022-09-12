@@ -6,8 +6,8 @@
   "main": "app.ts",
   "scripts": {
     "dev": "nodemon src/app.ts",
-    "start": "node ./src/app.js",
-    "build": "tsc && npx prisma migrate deploy"
+    "build": "tsc && npx prisma migrate deploy",
+    "start": "node dist/src/app.js"
   },
   "keywords": [],
   "author": "",
